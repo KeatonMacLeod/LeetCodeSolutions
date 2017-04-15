@@ -14,7 +14,7 @@ int lengthOfLongestSubstring(std::string s)
 	std::string lettersSeen = "";
 	int startOfString = 0;
 	int endOfString = 0;
-	int firstSeen = 0; //Used to track the first index we saw our duplicate character at..
+	int firstSeen = 0; //Used to track the first index we saw our duplicate character at.
 	int overallSubstringLength = 0; //The largest substring length without duplicates we've seen.
 	int currentSubstringLength = 0; //The current substring length without duplicates we've seen.
 
