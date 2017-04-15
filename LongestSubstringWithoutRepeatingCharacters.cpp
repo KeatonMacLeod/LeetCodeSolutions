@@ -21,7 +21,7 @@ int lengthOfLongestSubstring(std::string s)
 	for (int a = 0; a < s.length(); a++)
 	{
 
-		//If we've already seen that letter in our greatest substring.
+		//If we've already seen that letter in our greatest substring:
 		if (lettersSeen.find(s.at(a)) != std::string::npos)
 		{
 			firstSeen = lettersSeen.find(s.at(a));
