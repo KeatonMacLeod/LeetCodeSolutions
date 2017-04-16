@@ -34,7 +34,7 @@ int lengthOfLongestSubstring(std::string s)
 		lettersSeen += s.at(a);
 		currentSubstringLength++;
 
-		//If we ever see a great substring lenghth, make it the overall best.
+		//If we ever see a greater substring lenghth, make it the overall best.
 		if (currentSubstringLength > overallSubstringLength)
 			overallSubstringLength = currentSubstringLength;
 
