@@ -22,7 +22,7 @@ int reverse(int x)
 	for (int a = s.length() - 1; a >= 0; a--)
 		newString += s.at(a);
 
-	//Conver to 'long' in case the flipped number > INT_MAX
+	//Convert to 'long' in case the flipped number > INT_MAX
 	long newNumber = stol(newString);
 
 	//If the flipped number is too big / too small, return 0.
