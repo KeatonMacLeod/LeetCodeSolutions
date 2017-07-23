@@ -1,4 +1,5 @@
 //Determine whether an integer is a palindrome. Do this without extra space.
+//I used one of the most innovative solutions for this problem as a guideline.
 
 class Solution {
 public:
