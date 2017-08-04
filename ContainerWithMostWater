@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int maxArea(vector<int>& height) {
+        int lo = 0;
+        int hi = height.size()-1;
+        int max = 0;
+        while (lo < hi)
+        {
+            int dim = min(height[lo], height[hi]);
+            int area = dim * (hi-lo);
+            if (max < area) max = area;
+            while (height[lo] <= dim && lo < hi) lo++;
+            while (height[hi] <= dim && lo < hi) hi--;
+        }
+        return max;
+    }
+};
