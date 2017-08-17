@@ -1,0 +1,29 @@
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head) {
+        
+        if (!head || !head->next)
+            return head;
+        
+        ListNode* prev = NULL;  ListNode* curr = NULL;
+        ListNode* next = NULL;  ListNode* swap = NULL;
+        
+        prev = head;
+        curr = head->next;
+        head = curr;
+        
+        while (prev && curr) {
+            next = curr->next;
+            if (swap) swap->next = curr;
+            curr->next = prev;
+            swap = prev;
+            prev->next = NULL;
+            prev = next;
+            if (next) curr = next->next;
+        }
+        
+        if (!curr && swap) swap->next = prev;
+        
+        return head;
+    }
+};
