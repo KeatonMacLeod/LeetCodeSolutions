@@ -25,18 +25,14 @@ public:
         
         std::sort(nums.begin(),nums.end());
 
-        for (int a = 0; a <= nums.size()-3; a++)
-        {
+        for (int a = 0; a <= nums.size()-3; a++) {
                            
-            if (a == 0 || nums[a] > nums[a-1]) //Avoid duplicates
-            {
+            if (a == 0 || nums[a] > nums[a-1]) { //Avoid duplicates
                 int start = a+1;
                 int end = nums.size()-1;
 
-                while (end > start)
-                {
-                    if (nums[a] + nums[start] + nums[end] == 0)
-                    {
+                while (end > start) {
+                    if (nums[a] + nums[start] + nums[end] == 0) {
                         vector<int> temp;
                         temp.push_back(nums[a]);
                         temp.push_back(nums[start]);
@@ -44,23 +40,19 @@ public:
                         answer.push_back(temp);
                     }
                     
-                    if (nums[a] + nums[start] + nums[end] < 0)
-                    {
+                    if (nums[a] + nums[start] + nums[end] < 0) {
                         int curr_start = start;
                         while (nums[curr_start] == nums[start] && end > start) start++;
                     }
 
-                    else
-                    {
+                    else {
                         int curr_end = end;
                         while (nums[curr_end] == nums[end] && end > start) end--;
                     }
                     
                 }//while
-            
             }//if
-                
-    }//for
+        }//for
         
     return answer;
     }
