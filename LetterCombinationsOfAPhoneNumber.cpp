@@ -15,8 +15,7 @@ public:
         string letters [10] = {"", "", "abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
         vector<string> result;
         
-        for (int a = 0; a < digits.length(); a++)
-        {
+        for (int a = 0; a < digits.length(); a++) {
             if (digits.at(a) == '0' || digits.at(a) == '1') {
                 result.clear();
                 return result;
